@@ -26,6 +26,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>README.adoc</name>
+			<type>1</type>
+			<location>C:/STM32PLUS/WorkSpace/DesignPatternExamples/Observer-II/README.adoc</location>
+		</link>
+		<link>
 			<name>uml_class_diagram.png</name>
 			<type>1</type>
 			<location>C:/STM32PLUS/WorkSpace/DesignPatternExamples/Observer-II/uml_class_diagram.png</location>
