@@ -24,4 +24,16 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>README.adoc</name>
+			<type>1</type>
+			<location>C:/STM32PLUS/WorkSpace/DesignPatternExamples/Strategy-II/README.adoc</location>
+		</link>
+		<link>
+			<name>uml_class_diagram.png</name>
+			<type>1</type>
+			<location>C:/STM32PLUS/WorkSpace/DesignPatternExamples/Strategy-II/uml_class_diagram.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
