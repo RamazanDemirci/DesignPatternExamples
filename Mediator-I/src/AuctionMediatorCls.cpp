@@ -13,21 +13,21 @@
 
 AuctionMediatorCls::AuctionMediatorCls() {
 	// TODO Auto-generated constructor stub
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 }
 
 AuctionMediatorCls::~AuctionMediatorCls() {
 	// TODO Auto-generated destructor stub
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 }
 
 void AuctionMediatorCls::addBuyer(BuyerCls *buyer){
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 	this->buyerList.push_back(buyer);
 }
 
 void AuctionMediatorCls::findHighestBidder(){
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 	int maxBid = 0;
 	BuyerCls *winner = nullptr;
 	for (BuyerCls *b : this->buyerList) {
@@ -39,7 +39,7 @@ void AuctionMediatorCls::findHighestBidder(){
 
 	if(winner != nullptr)
 	{
-		printf("The auction winner is %s. He paid %d $ for the item.",
+		printf("\nThe auction winner is %s. He paid %d $ for the item.",
 				winner->name.c_str(), winner->price);
 	}
 }

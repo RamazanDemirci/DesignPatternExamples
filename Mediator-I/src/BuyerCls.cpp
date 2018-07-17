@@ -9,20 +9,20 @@
 
 BuyerCls::BuyerCls() {
 	// TODO Auto-generated constructor stub
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 	this->mediator = mediator;
 	this->name = name;
 }
 
 BuyerCls::BuyerCls(MediatorIfc *mediator, std::string name) {
 	// TODO Auto-generated constructor stub
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 	this->mediator = mediator;
 	this->name = name;
 }
 
 BuyerCls::~BuyerCls() {
 	// TODO Auto-generated destructor stub
-	printf("\n%s", __FUNCTION__);
+	//printf("\n%s", __FUNCTION__);
 }
 

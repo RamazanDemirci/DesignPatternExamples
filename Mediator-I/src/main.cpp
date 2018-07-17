@@ -30,18 +30,17 @@ int main()
 
 	// Making bids
 	buyer1->bid(1800);
-	buyer1->bid(2000);
-	buyer1->bid(780);
+	buyer2->bid(2000);
+	buyer3->bid(780);
 	printf("\n-----------------------------------------------");
 
 	mediator->findHighestBidder();
-	/*
+
 	buyer2->cancelTheBid();
 
-	printf("\n%s Has canceled his bid!, in that case");
+	printf("\n%s Has canceled his bid!, in that case"
+			, buyer2->name.c_str());
+
 	mediator->findHighestBidder();
-	*/
-
-
 }
 
