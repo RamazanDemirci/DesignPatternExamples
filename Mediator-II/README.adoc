@@ -1,0 +1,9 @@
+* It is used to handle communication between related objects(Colleagues)
+* All communication is handled by the Mediator and the Colleagues don't need to know anything about each other
+* Gang of Four: 
+	Allows loose coupling by encapsulating te way disparate sets of objects interact and communicate with each other.
+	Allows for the actions of each object set to vary independently of one another
+
+
+references : 
+https://www.youtube.com/watch?v=8DxIpdKd41A
