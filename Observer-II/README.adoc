@@ -1,1 +1,26 @@
-references : 
+
+* *SubjectCls :*
+	** This class keeps track of all the observers and provides the facility to *add* or *remove* the observers. 
+	** Also it is the class that is *responsible for updating the observers* when any change occurs.
+
+* *DummyProjectCls:*
+	** This class is the real class that *implements the Subject*. 
+	** This class is the entity whose change will affect other objects. 
+
+* *ObserverIfc:*
+	** This represents *an interface* that defines the method that should be called whenever there is change.
+	** *ObserverIfc::Update()* method is called for notify other objects about changes
+
+* *ShopCls:*
+	** This is the class which needs to *keep itself updated* with the change. 
+	** This class just needs 
+	    *** to *implement* the "ObserverIfc
+	    *** *register* itself with the "DummyProductCls
+	    *** it is all set to *receive* the "updates". 
+	    
+
+
+
+*_references :_* 
+    
+    https://www.codeproject.com/Articles/328365/Understanding-and-Implementing-Observer-Pattern-2
