@@ -5,20 +5,20 @@
  *      Author: tr1d5042
  */
 
-#include "DummyProduct.h"
+#include <DummyProductCls.h>
 
 namespace Observer {
 
-DummyProduct::DummyProduct() {
+DummyProductCls::DummyProductCls() {
 	// TODO Auto-generated constructor stub
 
 }
 
-DummyProduct::~DummyProduct() {
+DummyProductCls::~DummyProductCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void DummyProduct::ChangePrice(float price)
+void DummyProductCls::ChangePrice(float price)
 {
     Notify(price);
 }

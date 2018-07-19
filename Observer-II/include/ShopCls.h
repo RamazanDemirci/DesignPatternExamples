@@ -9,22 +9,22 @@
 #define SHOP_H_
 //#pragma once
 
+#include <ObserverIfc.h>
 #include <iostream>
 #include <string>
-#include "IObserver.h"
 
 namespace Observer {
 
-class Shop : IObserver{
+class ShopCls : ObserverIfc{
 public:
-	Shop();
-	virtual ~Shop();
+	ShopCls();
+	virtual ~ShopCls();
 
 	//Name of the Shop
 	std::string name;
 	float price;
 public:
-	Shop(std::string n);
+	ShopCls(std::string n);
 	void Update(float price);
 };
 

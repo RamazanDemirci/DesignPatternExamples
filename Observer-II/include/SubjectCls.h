@@ -9,23 +9,23 @@
 #define ASUBJECT_H_
 //#pragma once
 
+#include <ShopCls.h>
 #include <vector>
 #include <list>
-#include "Shop.h"
 
 namespace Observer {
 
-class ASubject {
+class SubjectCls {
 public:
-	ASubject();
-	virtual ~ASubject();
+	SubjectCls();
+	virtual ~SubjectCls();
 
 	//Lets keep a track of all the shops we have observing
-	std::vector<Shop*> list;
+	std::vector<ShopCls*> list;
 
 public:
-	void Attach(Shop *product);
-	void Detach(Shop *product);
+	void Attach(ShopCls *product);
+	void Detach(ShopCls *product);
 	void Notify(float price);
 };
 

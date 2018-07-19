@@ -9,7 +9,7 @@
 #define IOBSERVER_H_
 //#pragma once
 
-class IObserver
+class ObserverIfc
 {
 public:
     virtual void Update(float price) = 0;

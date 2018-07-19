@@ -9,14 +9,14 @@
 #define DUMMYPRODUCT_H_
 //#pragma once
 
-#include "ASubject.h"
+#include <SubjectCls.h>
 
 namespace Observer {
 
-class DummyProduct: public ASubject{
+class DummyProductCls: public SubjectCls{
 public:
-	DummyProduct();
-	virtual ~DummyProduct();
+	DummyProductCls();
+	virtual ~DummyProductCls();
 public:
     void ChangePrice(float price);
 };

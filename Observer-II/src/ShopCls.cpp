@@ -5,25 +5,25 @@
  *      Author: tr1d5042
  */
 
-#include "Shop.h"
+#include <ShopCls.h>
 
 namespace Observer {
 
-Shop::Shop() {
+ShopCls::ShopCls() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Shop::~Shop() {
+ShopCls::~ShopCls() {
 	// TODO Auto-generated destructor stub
 }
 
-Shop::Shop(std::string name)
+ShopCls::ShopCls(std::string name)
 {
     this->name = name;
 }
 
-void Shop::Update(float price)
+void ShopCls::Update(float price)
 {
     this->price = price;
 

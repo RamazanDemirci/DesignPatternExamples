@@ -6,21 +6,21 @@
  */
 
 #include <iostream>
-#include "ASubject.h"
-#include "DummyProduct.h"
-#include "Shop.h"
-#include "IObserver.h"
+#include "SubjectCls.h"
+#include "DummyProductCls.h"
+#include "ShopCls.h"
+#include "ObserverIfc.h"
 
 using namespace Observer;
 
 int main(int argc, char* argv[])
 {
-    DummyProduct product1;
+    DummyProductCls product1;
 
     // We have four shops wanting to keep updated price set by product owner
-    Shop shop1("Shop 1");
-    Shop shop2("Shop 2");
-    Shop shop3("Shop 3");
+    ShopCls shop1("Shop 1");
+    ShopCls shop2("Shop 2");
+    ShopCls shop3("Shop 3");
 
     product1.Attach(&shop1);
     product1.Attach(&shop2);

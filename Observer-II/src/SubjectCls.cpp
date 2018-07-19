@@ -5,35 +5,35 @@
  *      Author: tr1d5042
  */
 
-#include "ASubject.h"
+#include <SubjectCls.h>
 #include <algorithm>
 
 using namespace std;
 
 namespace Observer {
 
-ASubject::ASubject() {
+SubjectCls::SubjectCls() {
 	// TODO Auto-generated constructor stub
 
 }
 
-ASubject::~ASubject() {
+SubjectCls::~SubjectCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void ASubject::Attach(Shop *shop)
+void SubjectCls::Attach(ShopCls *shop)
 {
     list.push_back(shop);
 }
 
-void ASubject::Detach(Shop *shop)
+void SubjectCls::Detach(ShopCls *shop)
 {
     list.erase(std::remove(list.begin(), list.end(), shop), list.end());
 }
 
-void ASubject::Notify(float price)
+void SubjectCls::Notify(float price)
 {
-    for(vector<Shop*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
+    for(vector<ShopCls*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
     {
         if(*iter != 0)
         {
