@@ -16,20 +16,18 @@ class CricketDataCls : SubjectIfc {
 public:
 	CricketDataCls();
 	virtual ~CricketDataCls();
+	/*virtual*/void registerObserver(ObserverIfc *observer);
+	/*virtual*/void unregisterObserver(ObserverIfc *observer);
+	/*virtual*/void notifyObservers();
+	int getLatestRuns();
+	int getLatestWickets();
+	float getLatestOvers();
+	void dataChanged();
 public:
 	int runs;
 	int wickets;
 	float overs;
 	std::vector<ObserverIfc*> observerList;
-
-public:
-	void registerObserver(ObserverIfc *observer);
-	void unregisterObserver(ObserverIfc *observer);
-	void notifyObservers();
-	int getLatestRuns();
-	int getLatestWickets();
-	float getLatestOvers();
-	void dataChanged();
 };
 
 #endif /* CRICKET_DATA_CLS_H_ */
