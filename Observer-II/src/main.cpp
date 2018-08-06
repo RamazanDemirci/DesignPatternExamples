@@ -15,28 +15,39 @@ using namespace Observer;
 
 int main(int argc, char* argv[])
 {
-    DummyProductCls product1;
+    DummyProductCls turkishDelight("Turkish Delight");
+    DummyProductCls turkishKebab("Turkish Kebab");
 
     // We have four shops wanting to keep updated price set by product owner
-    ShopCls shop1("Shop 1");
-    ShopCls shop2("Shop 2");
-    ShopCls shop3("Shop 3");
+    ShopCls shop1("Restaurant 1");
+    ShopCls shop2("Restaurant 2");
+    ShopCls shop3("Restaurant 3");
 
-    product1.Attach(&shop1);
-    product1.Attach(&shop2);
-    product1.Attach(&shop3);
+    turkishDelight.Attach((ObserverIfc*)&shop1);
+    turkishDelight.Attach((ObserverIfc*)&shop2);
+    turkishDelight.Attach((ObserverIfc*)&shop3);
+
+    turkishKebab.Attach((ObserverIfc*)&shop1);
+    turkishKebab.Attach((ObserverIfc*)&shop3);
 
     //Now lets try changing the products price, this should update the shops automatically
-    product1.ChangePrice(23.0f);
+    printf("\n#####1st Update#####");
+    turkishDelight.ChangePrice(23.0f);
+    printf("\n#####2nd Update#####");
+    turkishKebab.ChangePrice(42.0f);
 
     //Now shop2 is not interested in new prices so they unsubscribe
-    product1.Detach(&shop2);
-
+    turkishDelight.Detach((ObserverIfc*)&shop2);
+    turkishKebab.Attach((ObserverIfc*)&shop2);
+    printf("\n#####3rd Update#####");
     //Now lets try changing the products price again
-    product1.ChangePrice(26.0f);
+    turkishDelight.ChangePrice(26.0f);
+    turkishKebab.ChangePrice(40.0);
 
-    int a;
-    std::cin >> a;
+    turkishDelight.Detach((ObserverIfc*)&shop1);
+    printf("\n#####4th Update#####");
+    turkishKebab.ChangePrice(41.5);
+
     return 0;
 }
 

@@ -9,9 +9,11 @@
 #define ASUBJECT_H_
 //#pragma once
 
-#include <ShopCls.h>
+
 #include <vector>
 #include <list>
+#include <string>
+#include "ObserverIfc.h"
 
 namespace Observer {
 
@@ -21,12 +23,15 @@ public:
 	virtual ~SubjectCls();
 
 	//Lets keep a track of all the shops we have observing
-	std::vector<ShopCls*> list;
+	std::vector<ObserverIfc*> list;
 
 public:
-	void Attach(ShopCls *product);
-	void Detach(ShopCls *product);
-	void Notify(float price);
+	void Attach(ObserverIfc *product);	/*add the observer to observer list*/
+	void Detach(ObserverIfc *product);	/*remove the observer from observer list*/
+	void Notify();	/*update all observer in the observer list*/
+
+	float price;
+	std::string name;
 };
 
 } /* namespace Observer */

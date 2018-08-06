@@ -9,11 +9,15 @@
 #define IOBSERVER_H_
 //#pragma once
 
-class ObserverIfc
-{
+namespace Observer {
+
+class SubjectCls;
+
+class ObserverIfc {
 public:
-    virtual void Update(float price) = 0;
+	virtual void Update(SubjectCls* subject) = 0;
 };
 
+} /* namespace Observer */
 
 #endif /* IOBSERVER_H_ */

@@ -23,12 +23,15 @@ ShopCls::ShopCls(std::string name)
     this->name = name;
 }
 
-void ShopCls::Update(float price)
+void ShopCls::Update(SubjectCls *subject)
 {
     this->price = price;
 
     //Lets print on console just to test the working
-    std::cout << "Price at "<< name << " is now "<< price << "\n";
+    printf("\nPrice of product \"%s\" at \"%s\" is now \"%.2f\""
+    		, subject->name.c_str()
+			, this->name.c_str()
+			, subject->price);
 }
 
 } /* namespace Observer */

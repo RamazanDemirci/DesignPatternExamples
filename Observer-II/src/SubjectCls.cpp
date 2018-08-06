@@ -21,23 +21,26 @@ SubjectCls::~SubjectCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void SubjectCls::Attach(ShopCls *shop)
+void SubjectCls::Attach(ObserverIfc *shop)
 {
     list.push_back(shop);
 }
 
-void SubjectCls::Detach(ShopCls *shop)
+void SubjectCls::Detach(ObserverIfc *shop)
 {
     list.erase(std::remove(list.begin(), list.end(), shop), list.end());
 }
 
-void SubjectCls::Notify(float price)
+void SubjectCls::Notify()
 {
-    for(vector<ShopCls*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
+    for(vector<ObserverIfc*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
     {
         if(*iter != 0)
         {
-            (*iter)->Update(price);
+        	/*Call all observers Update() Funtion for notify them about update*/
+        	/*We know actually only observer interface and its update() method*/
+        	/*We dont care concrete observer class/type*/
+            (*iter)->Update(this);
         }
     }
 }

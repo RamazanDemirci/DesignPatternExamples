@@ -5,22 +5,22 @@
  *      Author: tr1d5042
  */
 
-#include <DummyProductCls.h>
+#include "DummyProductCls.h"
 
 namespace Observer {
 
-DummyProductCls::DummyProductCls() {
+DummyProductCls::DummyProductCls(std::string name) {
 	// TODO Auto-generated constructor stub
-
+	SubjectCls::name = name;
 }
 
 DummyProductCls::~DummyProductCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void DummyProductCls::ChangePrice(float price)
-{
-    Notify(price);
+void DummyProductCls::ChangePrice(float price){
+	SubjectCls::price = price;
+    SubjectCls::Notify();
 }
 
 } /* namespace Observer */
