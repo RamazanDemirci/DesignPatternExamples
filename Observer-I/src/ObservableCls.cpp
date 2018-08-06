@@ -4,24 +4,24 @@
  *  Created on: 2 Tem 2018
  *      Author: tr1d5042
  */
+#include <ObservableCls.h>
 #include <algorithm>
-#include "Observable.h"
 
 using namespace std;
 
-Observable::Observable() {
+ObservableCls::ObservableCls() {
 	// TODO Auto-generated constructor stub
 }
 
-Observable::~Observable() {
+ObservableCls::~ObservableCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void Observable::addObserver(ObserverIfc *observer){
+void ObservableCls::addObserver(ObserverIfc *observer){
 	list.push_back(observer);
 }
 
-void Observable::removeObserver(ObserverIfc *observer){
+void ObservableCls::removeObserver(ObserverIfc *observer){
 	list.erase(std::remove(list.begin(), list.end(), observer), list.end());
 }
 /*

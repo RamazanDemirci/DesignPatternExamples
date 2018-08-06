@@ -8,15 +8,15 @@
 #ifndef OBSERVABLE_IFC_H_
 #define OBSERVABLE_IFC_H_
 
+#include <DoctorCls.h>
 #include <vector>
 #include <string>
-#include "Doctor.h"
 
-class Observable
+class ObservableCls
 {
 public:
-	Observable();
-	virtual ~Observable();
+	ObservableCls();
+	virtual ~ObservableCls();
 
 	std::vector<ObserverIfc*> list;
 

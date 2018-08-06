@@ -5,27 +5,27 @@
  *      Author: tr1d5042
  */
 
-#include "Patient.h"
+#include <PatientCls.h>
 #include <algorithm>
 
 using namespace std;
 
-Patient::Patient() {
+PatientCls::PatientCls() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Patient::~Patient() {
+PatientCls::~PatientCls() {
 	// TODO Auto-generated destructor stub
 	this->name = "Unknown";
 }
 
-Patient::Patient(std::string name)
+PatientCls::PatientCls(std::string name)
 {
 	this->name = name;
 }
 
-void Patient::Notify(std::string notify){
+void PatientCls::Notify(std::string notify){
 	//printf("\n%s", __FUNCTION__);
 	for(std::vector<ObserverIfc*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
 	{
@@ -36,21 +36,21 @@ void Patient::Notify(std::string notify){
 	}
 }
 
-const char* Patient::getName(){
+const char* PatientCls::getName(){
 	//printf("%s", __FUNCTION__);
 	return this->name.c_str();
 }
-void Patient::setName(std::string name){
+void PatientCls::setName(std::string name){
 	//printf("%s", __FUNCTION__);
 	this->name = name;
 }
 
-const char* Patient::getState(){
+const char* PatientCls::getState(){
 	//printf("%s", __FUNCTION__);
 	return this->state.c_str();
 }
 
-void Patient::setState(std::string state){
+void PatientCls::setState(std::string state){
 	//printf("%s", __FUNCTION__);
 	this->state = state;
 	Notify(getState());

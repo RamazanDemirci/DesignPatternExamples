@@ -8,28 +8,24 @@
 #ifndef PATIENT_H_
 #define PATIENT_H_
 
+#include <ObservableCls.h>
 #include <string>
 #include <vector>
 
-#include "Observable.h"
 
-class Patient : public Observable{
+class PatientCls : public ObservableCls{
 public:
-	Patient();
-	virtual ~Patient();
-	Patient(std::string name);
-private:
-	std::string name;
-	std::string state;
-
-public:
-	void Notify(std::string notify);
-
-public:
+	PatientCls();
+	virtual ~PatientCls();
+	PatientCls(std::string name);
+	/*virtual*/void Notify(std::string notify);
 	const char* getName();
 	void setName(std::string name);
 	const char* getState();
 	void setState(std::string state);
+private:
+	std::string name;
+	std::string state;
 };
 
 #endif /* PATIENT_H_ */

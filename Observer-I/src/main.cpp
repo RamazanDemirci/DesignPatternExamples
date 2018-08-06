@@ -5,26 +5,26 @@
  *      Author: tr1d5042
  */
 
+#include <DoctorCls.h>
+#include <NurseCls.h>
+#include <PatientCls.h>
+#include <PatientRelativeCls.h>
 #include <stdio.h>
-#include "Doctor.h"
-#include "Patient.h"
-#include "Nurse.h"
-#include "PatientRelative.h"
 
 //int main(int argc, char *argv[])
 int main()
 {
-	Doctor *doctor01 = new Doctor("John Doe");
-	Doctor *doctor02 = new Doctor("Jane Doe");
-	Doctor *doctor03 = new Doctor("Mike Square");
+	DoctorCls *doctor01 = new DoctorCls("John Doe");
+	DoctorCls *doctor02 = new DoctorCls("Jane Doe");
+	DoctorCls *doctor03 = new DoctorCls("Mike Square");
 
-	Nurse *nurse01 = new Nurse("Jessica Smith");
-	Nurse *nurse02 = new Nurse("Mary Claire");
-	Nurse *nurse03 = new Nurse("Monica Bellucci");
+	NurseCls *nurse01 = new NurseCls("Jessica Smith");
+	NurseCls *nurse02 = new NurseCls("Mary Claire");
+	NurseCls *nurse03 = new NurseCls("Monica Bellucci");
 
 	printf("\n------------------------------------");
 
-	Patient *patient01 = new Patient("James Smith");
+	PatientCls *patient01 = new PatientCls("James Smith");
 	//patient01->addObserver(doctor01);
 	//patient01->addObserver(doctor02);
 	//patient01->addObserver(nurse01);
@@ -38,7 +38,7 @@ int main()
 
 	printf("\n------------------------------------");
 
-	PatientRelative *patientRelative01 = new PatientRelative("Harry Kane");
+	PatientRelativeCls *patientRelative01 = new PatientRelativeCls("Harry Kane");
 	patientRelative01->addObserver(doctor01);
 	patientRelative01->addObserver(doctor02);
 	patientRelative01->addObserver(nurse01);
@@ -55,7 +55,7 @@ int main()
 
 	printf("\n------------------------------------");
 
-	Patient *patient02 = new Patient("Steve Brown");
+	PatientCls *patient02 = new PatientCls("Steve Brown");
 	patient02->addObserver(doctor01);
 	patient02->addObserver(nurse03);
 	printf("\nPatient %s is observed by doctor(s) : %s, nurses(s) :%s"
@@ -66,7 +66,7 @@ int main()
 
 	printf("\n------------------------------------");
 
-	Patient *patient03 = new Patient("Amy Micheal");
+	PatientCls *patient03 = new PatientCls("Amy Micheal");
 	patient03->addObserver(doctor02);
 	patient03->addObserver(doctor03);
 	patient03->addObserver(nurse02);

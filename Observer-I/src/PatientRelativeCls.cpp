@@ -5,45 +5,45 @@
  *      Author: tr1d5042
  */
 
-#include "PatientRelative.h"
+#include <PatientRelativeCls.h>
 #include <algorithm>
 
-PatientRelative::PatientRelative() {
+PatientRelativeCls::PatientRelativeCls() {
 	// TODO Auto-generated constructor stub
 
 }
 
-PatientRelative::~PatientRelative() {
+PatientRelativeCls::~PatientRelativeCls() {
 	// TODO Auto-generated destructor stub
 	this->name = "Unknown";
 }
 
-PatientRelative::PatientRelative(std::string name)
+PatientRelativeCls::PatientRelativeCls(std::string name)
 {
 	this->name = name;
 }
 
-const char* PatientRelative::getName(){
+const char* PatientRelativeCls::getName(){
 	//printf("%s", __FUNCTION__);
 	return this->name.c_str();
 }
-void PatientRelative::setName(std::string name){
+void PatientRelativeCls::setName(std::string name){
 	//printf("%s", __FUNCTION__);
 	this->name = name;
 }
 
-const char* PatientRelative::getState(){
+const char* PatientRelativeCls::getState(){
 	//printf("%s", __FUNCTION__);
 	return this->state.c_str();
 }
 
-void PatientRelative::setState(std::string state){
+void PatientRelativeCls::setState(std::string state){
 	//printf("%s", __FUNCTION__);
 	this->state = state;
 	Notify(getState());
 }
 
-void PatientRelative::Notify(std::string notify){
+void PatientRelativeCls::Notify(std::string notify){
 	//printf("\n%s", __FUNCTION__);
 	for(std::vector<ObserverIfc*>::const_iterator iter = list.begin(); iter != list.end(); ++iter)
 	{

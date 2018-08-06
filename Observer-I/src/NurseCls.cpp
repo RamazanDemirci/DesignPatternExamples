@@ -5,30 +5,30 @@
  *      Author: tr1d5042
  */
 
-#include "Nurse.h"
-#include "Patient.h"
+#include <NurseCls.h>
+#include <PatientCls.h>
 #include <stdio.h>
 
-Nurse::Nurse() {
+NurseCls::NurseCls() {
 	// TODO Auto-generated constructor stub
 	this->name = "Unknown";
 }
 
-Nurse::~Nurse() {
+NurseCls::~NurseCls() {
 	// TODO Auto-generated destructor stub
 }
 
-Nurse::Nurse(std::string name) {
+NurseCls::NurseCls(std::string name) {
 	//printf("\n%s", __FUNCTION__);
 	this->name = name;
 }
 
-const char* Nurse::getName(){
+const char* NurseCls::getName(){
 	//printf("\n%s", __FUNCTION__);
 	return this->name.c_str();
 }
 
-void Nurse::update(std::string notify){
+void NurseCls::update(std::string notify){
 	//printf("\n%s", __FUNCTION__);
 	printf("\nSMS sent to Nurse %s :::::>> patient %s", this->getName(), notify);
 

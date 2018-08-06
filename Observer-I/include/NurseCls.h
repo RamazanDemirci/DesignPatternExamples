@@ -5,20 +5,18 @@
  *      Author: tr1d5042
  */
 
-#ifndef DOCTOR_H_
-#define DOCTOR_H_
+#pragma once
 
 #include <string>
 
-//#include "Observable.h"
 #include "ObserverIfc.h"
 
-class Doctor : public ObserverIfc{
+class NurseCls : public ObserverIfc{
 public:
-	Doctor();
-	~Doctor();
-	Doctor(std::string);
+	NurseCls();
 
+	~NurseCls();
+	NurseCls(std::string);
 private:
 	std::string name;
 
@@ -26,5 +24,3 @@ public:
 	const char* getName();
 	void update(std::string notify);
 };
-
-#endif /* DOCTOR_H_ */
