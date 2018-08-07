@@ -1,0 +1,6 @@
+
+
+
+_*references:*_
+
+https://sourcemaking.com/design_patterns/iterator/cpp/1

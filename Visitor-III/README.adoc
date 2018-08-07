@@ -1,0 +1,44 @@
+#Kullanýcý -> Check eder -> sistemi ve tüm parçalarý
+#Kullanýcý -> Parça operasyonu yapar -> sistemi ve tüm parçalarý
+
+/*sistem : bike , parçalar : engine, fuelTank*/
+
+/*Parçalarý check eden class ihtiyacýmýz var*/
+/*bu sýnýf tüm parçalara bir þekilde eriþebilecek*/
+/*her parçayý check edecek fonksiyonlara ihtiyacýmýz var*/
+
+/*parça operasyonu yapacak class ihtiyacýmýz var*/
+/*bu sýnýf tüm parçalara bir þekilde eriþebilecek*/
+/*her parça için kontrol edecek fonksiyonlara ihtiyacýmýz var*/
+
+/*parça classlarý deðiþmeyen classlar*/
+/*operasyonlardan etkilenmeyecekler*/
+/*bu sýnýflarý kullanan sýnýflardan gelen tüm operasyonlarý kabul edecek ve operasyonlarýn yazýldýðý sýnýfa kendilerini("this") gönderekler*/
+
+/*sistemi temsil eden class parça classlarý gibi operasyonlarýn yapýldýðý sýnýflarý kabul eder ve iþlemlerini gerçekleþtirir*/
+/*sistem classlarý parçalarý tutacak bir container bulundurur.*/
+/*sistem classlarý parçalarý ekleyip çýkartabilir*/
+
+
+#Implimentation
+
+/*Sistem Objesi Yaratýlýr.*/
+/*Eklenecek parça objeleri yaratýlýr ve eklenir*/
+/*sistemin yapmasýný istediðiðimiz operasyonlarý gerçekleþtirecek class objeleri yaratýlýr ve sistem objesine "accept" metodu ile verilir*/
+
+/*sistemin gerçekleþtirmesini istediðimiz operasyonlarý tanýmladýðýmýz sýnýflara "visitor" sýnýflar diyoruz.bunlar için bir interface yaratýyoruz. concrete sýnýflarda her bir ayrý parça için "visit" fonksiyonu yazýlýr ki fonksiyon operasyonun nasýl yapýlacaðýný ifade eder.*/
+
+/*sistem ve parçalarýna "visitable" sýnýflar diyoruz. bunlar için bir interface yartýyoruz ki gerçekleþtirilecek operasyonlarý kabul etmek için "accept" metodu yazýlýr*/
+/*sistem class accept metodu tüm parçalar için parçalarýn accept metorunu çaðýrarak operasyon sýnýfý içerisinde belirlenen gerekli operasyonlarý gerçekleþtirmesi saðlanýr*/
+
+## ÖZET ##
+/*Deðiþmez bir sistem olmalý.*/
+/*bu sistem operasyonlarý tamamen kullanýcýya býrakmalý yada kullanýcý kendi operasyonlarýný tanýmlayabilmeli*/
+/*"visitor" interface i kullanýcý için sistemde kontrol edebileceði "visitable" interface'inden türemiþ classlar için kendi operasyonlarýný yazmasýna imkan saðlar*/
+  
+
+
+
+*_references :_* 
+    
+    http://www.thejavageek.com/2016/10/19/visitor-design-pattern-implementation/

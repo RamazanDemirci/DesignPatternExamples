@@ -22,9 +22,9 @@
 
 #######################################
 
-    * req_1 : "Doctor" should know any changes in state of "Patient" 
-    * req_2 : "Doctor" should *observe* any changes in state of "Patient" 
-    * req_3 : "Doctor" should *update* when is occured any changes in state of "Patient" 
+    * req_1 : "Doctor" should know any changes in "Patient" status 
+    * req_2 : "Doctor" should *observe* any changes in "Patient" status 
+    * req_3 : "Doctor" should *update* when is occured any changes of "Patient" status 
 
 * For loose coupling, above requirements implement as *ObserverIfc* which is interface, therefore *ShopCls* is inherited from this interface
 
