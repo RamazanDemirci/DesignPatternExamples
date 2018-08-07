@@ -17,7 +17,23 @@
 	    *** to *implement* the "ObserverIfc
 	    *** *register* itself with the "SubjectCls"
 	    *** it is all set to *receive* the "updates". 
-	    
+
+
+#######################################
+req_1 : "Shop" should know any changes in price of "Product" 
+req_2 : "Shop" should *observe* any changes in price of "Product"
+req_3 : "Shop" should *update* when is occured any changes in price of "Product"
+
+* For loose coupling, above requirements implement as *ObserverIfc* which is interface, therefore *ShopCls* is inherited from this interface
+
+
+req_4 : "Product" should have *many* observers
+req_5 : "Product" should *notify* its observers
+req_6 : "Product" should *hold* its observers list for notify all observer
+req_7 : "Product" should be able to *add/remove* its observers
+
+* For loose coupling, above requirements implement as "SubjectCls" which is abstract class, therefore *DummyProductCls* is inherited from this interface
+#######################################
 
 
 

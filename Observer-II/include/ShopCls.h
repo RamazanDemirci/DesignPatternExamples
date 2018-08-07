@@ -26,7 +26,7 @@ public:
 	std::string name;
 	float price;
 public:
-	ShopCls(std::string n);
+	ShopCls(std::string name);
 	void Update(SubjectCls *subject);
 };
 

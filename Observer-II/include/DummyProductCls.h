@@ -18,7 +18,6 @@ class DummyProductCls: public SubjectCls{
 public:
 	DummyProductCls(std::string name);
 	virtual ~DummyProductCls();
-public:
     void ChangePrice(float price);
 };
 
