@@ -1,4 +1,4 @@
-/*
+	/*
  * AuctionBuyerCls.h
  *
  *  Created on: 17 Tem 2018
@@ -12,6 +12,8 @@
 #include "MediatorIfc.h"
 
 class AuctionBuyerCls : public BuyerCls{
+	typedef BuyerCls base;	/*represent the base(parent) class*/
+
 public:
 	AuctionBuyerCls();
 	AuctionBuyerCls(MediatorIfc *mediator, std::string name);

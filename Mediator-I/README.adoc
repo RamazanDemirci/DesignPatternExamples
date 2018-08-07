@@ -1,1 +1,41 @@
-https://www.youtube.com/watch?v=CkpSOhIuHSY&t=117s
+* *MediatorIfc:*
+	** defines an interface for communicating with *Colleague*(AuctionBuyerCls) objects. 
+
+* *AuctionMediatorCls:*
+    ** implements cooperative behavior by coordinating Colleague objects.
+    ** knows and maintains its colleagues.
+
+* *BuyerCls:*
+	** Abstract class for loose coupling. 
+	
+* *AuctionBuyerCls:*
+	** each Colleague class knows its Mediator object.. 
+	** each colleague communicates with its mediator whenever it would have
+otherwise communicated with another colleague. 
+
+
+#######################################
+
+    * req_1 : "Auctioner" should communicate each "Bidder"
+    * req_3 : "Auctioner" should have *many* "Bidder"s
+    * req_3 : "Auctioner" should find highest "Bidder"
+    * req_3 : "Auctioner" should *register* its colleagues list for find highest "Bidder"
+    * req_2 : "Auctioner" should be able to *add/remove* its "Bidder" 
+    
+
+* For loose coupling, above requirements implement as *MediatorIfc* which is interface, therefore *AuctionMediatorCls* is inherited from this interface
+
+
+    * req_4 : "Bidder" should communicate "Auctioner"
+    * req_3 : "Bidder" should have *one* "Auctioner"
+    * req_5 : "Bidder" should offer bid.
+    * req_5 : "Bidder" should cancel bid.
+    
+
+* For loose coupling, above requirements implement as *BuyerCls* which is abstract class, therefore *AuctionBuyerCls* is inherited from this interface
+
+#######################################
+
+
+*_references :_* 
+    

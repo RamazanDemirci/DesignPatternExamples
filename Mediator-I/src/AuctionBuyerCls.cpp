@@ -14,8 +14,8 @@ AuctionBuyerCls::AuctionBuyerCls() {
 
 AuctionBuyerCls::AuctionBuyerCls(MediatorIfc *mediator, std::string name){
 	//printf("\n%s", __FUNCTION__);
-	this->mediator = mediator;
-	this->name = name;
+	base::mediator = mediator;
+	base::name = name;
 }
 
 AuctionBuyerCls::~AuctionBuyerCls() {
@@ -25,10 +25,13 @@ AuctionBuyerCls::~AuctionBuyerCls() {
 
 void AuctionBuyerCls::bid(int price){
 	//printf("\n%s", __FUNCTION__);
-	this->price = price;
+	BuyerCls::price = price;
+	printf("\nBuyer \"%s\" offer %d $"
+				, BuyerCls::name.c_str()
+				, BuyerCls::price);
 }
 
 void AuctionBuyerCls::cancelTheBid(){
 	//printf("\n%s", __FUNCTION__);
-	this->price = -1;
+	BuyerCls::price = -1;
 }
