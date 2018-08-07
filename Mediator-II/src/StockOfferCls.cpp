@@ -34,7 +34,7 @@ std::string StockOfferCls::getStockSymbol(){
 	return this->stockSymbol;
 }
 
-int StockOfferCls::getColleaguCode(){
+int StockOfferCls::getColleagueCode(){
 //	printf("\n%s", __FUNCTION__);
 	return this->colleaguCode;
 }

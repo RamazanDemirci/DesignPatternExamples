@@ -21,26 +21,35 @@ StockMediatorCls::~StockMediatorCls() {
 
 void StockMediatorCls::saleOffer(std::string stock, int shares, int colleagueCode){
 //	printf("\n%s", __FUNCTION__);
-
 	bool stockSold = false;
 
-	std::for_each(this->stockSellList.begin(), this->stockSellList.end(),
+	std::for_each(this->stockBuyList.begin(), this->stockBuyList.end(),
 			[=, &stockSold](StockOfferCls *item) {
 				if( (item->getStockSymbol().c_str() == stock) && (item->getNumOfShares() == shares ) ) {
-					printf("\n%s shares of %s sold to colleague code "
+					printf("\n%d shares of %s sold to colleague code %d"
 							, shares
-							, item->getColleaguCode());
+							, stock.c_str()
+							, item->getColleagueCode());
 
-					this->stockBuyList.erase(std::remove(this->stockBuyList.begin(), this->stockBuyList.end(), item), this->stockBuyList.end());
+					this->stockBuyList.erase(
+							std::remove(
+								      this->stockBuyList.begin()
+									, this->stockBuyList.end()
+									, item
+							)
+							, this->stockBuyList.end()
+					);
 					stockSold = true;
 				}
 
-				if(stockSold) {return;}
+				if(stockSold) { return; }
 			});
 
 	if (!stockSold) {
 
-		printf("\n%d share of %s remove from inventory", shares, stock.c_str());
+		printf("\n%d share of %s remove from inventory"
+				, shares
+				, stock.c_str());
 
 		StockOfferCls *newOffering = new StockOfferCls(shares, stock,
 				colleagueCode);
@@ -51,25 +60,33 @@ void StockMediatorCls::saleOffer(std::string stock, int shares, int colleagueCod
 
 void StockMediatorCls::buyOffer(std::string stock, int shares, int colleagueCode){
 //	printf("\n%s", __FUNCTION__);
-
 	bool stockBought = false;
 
-	std::for_each(this->stockBuyList.begin(), this->stockBuyList.end(),
+	std::for_each(this->stockSellList.begin(), this->stockSellList.end(),
 			[=, &stockBought](StockOfferCls *item) {
 				if( (item->getStockSymbol().c_str() == stock) && (item->getNumOfShares() == shares ) ) {
-					printf("\n%s shares of %s sold to colleague code "
+					printf("\n%d shares of %s bought from colleague code %d"
 							, shares
-							, item->getColleaguCode());
+							, stock.c_str()
+							, item->getColleagueCode());
 
-					this->stockSellList.erase(std::remove(this->stockSellList.begin(), this->stockSellList.end(), item), this->stockSellList.end());
+					this->stockSellList.erase(
+							std::remove(
+									  this->stockSellList.begin()
+									, this->stockSellList.end()
+									, item)
+							, this->stockSellList.end()
+					);
 					stockBought = true;
 				}
 
-				if(stockBought) {return;}
+				if(stockBought) { return; }
 			});
 
 	if (!stockBought) {
-		printf("\n%d share of %s added to inventory", shares, stock.c_str());
+		printf("\n%d share of %s added to inventory"
+				, shares
+				, stock.c_str());
 
 		StockOfferCls *newOffering = new StockOfferCls(shares, stock,
 				colleagueCode);
@@ -88,7 +105,6 @@ void StockMediatorCls::addColleague(ColleagueCls *colleague){
 
 void StockMediatorCls::getStockOfferings(){
 //	printf("\n%s", __FUNCTION__);
-
 	printf("\nStocks for Sale");
 	std::for_each(this->stockSellList.begin(), this->stockSellList.end(),
 			[](StockOfferCls *item) {

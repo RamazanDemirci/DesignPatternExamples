@@ -1,9 +1,46 @@
-* It is used to handle communication between related objects(Colleagues)
-* All communication is handled by the Mediator and the Colleagues don't need to know anything about each other
-* Gang of Four: 
-	Allows loose coupling by encapsulating te way disparate sets of objects interact and communicate with each other.
-	Allows for the actions of each object set to vary independently of one another
+* *MediatorIfc:*
+	** defines an interface for communicating with *Colleague*(ColleagueCls) objects. 
+
+* *StockMediatorCls:*
+    ** implements cooperative behavior by coordinating Colleague objects.
+    ** knows and maintains its colleagues.
+
+* *ColleagueCls:*
+	** Abstract class for loose coupling. 
+	
+* *GormanSlacksCls:*
+* *JTPoormanCls:*
+	** each Colleague class knows its Mediator object.. 
+	** each colleague communicates with its mediator whenever it would have otherwise communicated with another colleague.
+
+* *StockOfferCls:* 
+    ** Action Item Class. Helper Class
+
+#######################################
+
+    * req_1  : "Stock Exchange" should communicate each "Broker"
+    * req_2  : "Stock Exchange" should have *many* "Broker"s
+    * req_3  : "Stock Exchange" should list all Stock Offerings
+    * req_4  : "Stock Exchange" should *register* its colleagues list for list all Stock Offerings
+    * req_5  : "Stock Exchange" should be able to *add/remove* its "Colleague"
+    * req_6  : "Stock Exchange" should *register* its *bought/sold* "StockOffers".
+    * req_7  : "Stock Exchange" should be able to *add/remove* its *bought/sold* "StockOffers".    
+    * req_8  : "Stock Exchange" should list all Stock Offerings
+
+* For loose coupling, above requirements implement as *MediatorIfc* which is interface, therefore *StockMediatorCls* is inherited from this interface
+
+    * req_9  : "Colleague" should communicate "Stock Exchange"
+    * req_10 : "Colleague" should have coupled *one* "Stock Exchange"
+    * req_11 : "Colleague" should be able to sell "StockOffer" to other Colleague
+    * req_12 : "Colleague" should be able to buy "StockOffer" from other Colleague
+    * req_13 : "Colleague" should be able to add "StockOffer" to inventory
+    * req_14 : "Colleague" should be able to remove "StockOffer" from inventory
+    
+* For loose coupling, above requirements implement as *BuyerCls* which is abstract class, therefore *AuctionBuyerCls* is inherited from this interface
+
+#######################################
 
 
-references : 
-https://www.youtube.com/watch?v=8DxIpdKd41A
+*_references :_*
+
+    https://www.youtube.com/watch?v=8DxIpdKd41A 

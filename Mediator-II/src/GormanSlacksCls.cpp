@@ -16,7 +16,7 @@ GormanSlacksCls::GormanSlacksCls() {
 GormanSlacksCls::GormanSlacksCls(MediatorIfc *mediator){
 //	printf("\n%s", __FUNCTION__);
 	this->mediator = mediator;
-	printf("\nGorman Slacks signed up for the exchange");
+	printf("\n\"Gorman Slacks\" signed up for the exchange");
 }
 
 GormanSlacksCls::~GormanSlacksCls() {

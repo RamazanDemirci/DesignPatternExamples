@@ -15,7 +15,7 @@ JTPoormanCls::JTPoormanCls() {
 JTPoormanCls::JTPoormanCls(MediatorIfc *mediator){
 //	printf("\n%s", __FUNCTION__);
 	this->mediator = mediator;
-	printf("\nJT Poorman signed up for the exchange");
+	printf("\n\"JT Poorman\" signed up for the exchange");
 }
 
 JTPoormanCls::~JTPoormanCls() {

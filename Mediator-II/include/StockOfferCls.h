@@ -17,7 +17,7 @@ public:
 	StockOfferCls(int numOfShares, std::string stockSymbol, int colleaguCode);
 	int getNumOfShares();
 	std::string getStockSymbol();
-	int getColleaguCode();
+	int getColleagueCode();
 private:
 	int numOfShares;
 	std::string stockSymbol;
