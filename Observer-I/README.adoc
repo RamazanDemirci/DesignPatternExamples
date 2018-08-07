@@ -20,6 +20,23 @@
 	    *** *register* itself with the "ObservableIfc"
 	    *** it is all set to *receive* the "updates".	    
 
+#######################################
+
+    * req_1 : "Doctor" should know any changes in state of "Patient" 
+    * req_2 : "Doctor" should *observe* any changes in state of "Patient" 
+    * req_3 : "Doctor" should *update* when is occured any changes in state of "Patient" 
+
+* For loose coupling, above requirements implement as *ObserverIfc* which is interface, therefore *ShopCls* is inherited from this interface
+
+
+    * req_4 : "Patient" should have *many* observers
+    * req_5 : "Patient" should *notify* its observers
+    * req_6 : "Patient" should *hold* its observers list for notify all observer
+    * req_7 : "Patient" should be able to *add/remove* its observers
+
+* For loose coupling, above requirements implement as "SubjectCls" which is abstract class, therefore *DummyProductCls* is inherited from this interface
+
+#######################################
 
 
 *_references :_* 
