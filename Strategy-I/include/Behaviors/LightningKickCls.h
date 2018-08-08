@@ -11,11 +11,12 @@
 #include "KickBehaviorIfc.h"
 
 class LightningKickCls : public KickBehaviorIfc {
+	typedef KickBehaviorIfc base;
 public:
 	LightningKickCls();
 	virtual ~LightningKickCls();
 	/*MemberFunctions*/
-	void kick();
+	float kick();
 };
 
 #endif /* LIGHTNINGKICKCLS_H_ */

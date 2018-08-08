@@ -9,7 +9,7 @@
 #define JUMPBEHAVIORIFC_H_
 
 
-class JumpBehaviorIfc{
+class JumpBehaviorIfc {
 public:
 	virtual void jump() = 0;
 };

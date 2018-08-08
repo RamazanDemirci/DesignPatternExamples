@@ -10,14 +10,15 @@
 
 LightningKickCls::LightningKickCls() {
 	// TODO Auto-generated constructor stub
-
+	base::damage = 6;
 }
 
 LightningKickCls::~LightningKickCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void LightningKickCls::kick(){
+float LightningKickCls::kick(){
 	printf("\n Lightning Kick");
+	return base::damage;
 }
 

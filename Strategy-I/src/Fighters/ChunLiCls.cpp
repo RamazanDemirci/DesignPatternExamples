@@ -10,7 +10,6 @@
 
 ChunLiCls::ChunLiCls() {
 	// TODO Auto-generated constructor stub
-
 }
 
 ChunLiCls::~ChunLiCls() {
@@ -20,9 +19,14 @@ ChunLiCls::~ChunLiCls() {
 ChunLiCls::ChunLiCls(KickBehaviorIfc *kickBehavior, JumpBehaviorIfc *jumpBehavior){
 	this->kickBehavior = kickBehavior;
 	this->jumpBehavior = jumpBehavior;
+	healthScore = 36;
+	FighterCls::name = "Chun Li";
 }
 
 void ChunLiCls::display(){
-	printf("\nChunLi");
+	printf("\nChunLi : ");
+	for(int i = 0; i < healthScore; i++) {
+		printf("#");
+	}
 }
 

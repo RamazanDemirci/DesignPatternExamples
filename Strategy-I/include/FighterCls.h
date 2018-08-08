@@ -8,6 +8,7 @@
 #ifndef FIGHTERCLS_H_
 #define FIGHTERCLS_H_
 
+#include <string>
 #include "KickBehaviorIfc.h"
 #include "JumpBehaviorIfc.h"
 
@@ -21,6 +22,8 @@ public:
 	/*Attributes*/
 	KickBehaviorIfc *kickBehavior;
 	JumpBehaviorIfc *jumpBehavior;
+	float healthScore;
+	std::string name;
 
 	/*Member Function*/
 	void punch();
@@ -29,6 +32,8 @@ public:
 	void roll();
 	void setKickBehavior(KickBehaviorIfc *kickBehavior);
 	void setJumpBehavior(JumpBehaviorIfc *jumpBehavior);
+	void descHealthScore(float damage);
+	void incHealthScore(float cure);
 	virtual void display() = 0;
 };
 

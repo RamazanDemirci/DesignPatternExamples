@@ -10,7 +10,6 @@
 
 ShortJumpCls::ShortJumpCls() {
 	// TODO Auto-generated constructor stub
-
 }
 
 ShortJumpCls::~ShortJumpCls() {

@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "LongJumpCls.h"
 
-LongJumpCls::LongJumpCls() {
+LongJumpCls::LongJumpCls(){
 	// TODO Auto-generated constructor stub
 
 }

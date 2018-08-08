@@ -11,7 +11,8 @@
 
 class KickBehaviorIfc{
 public:
-	virtual void kick() = 0;
+	virtual float kick() = 0;
+	float damage;
 };
 
 

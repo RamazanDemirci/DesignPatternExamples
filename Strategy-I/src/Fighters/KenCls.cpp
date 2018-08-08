@@ -10,7 +10,6 @@
 
 KenCls::KenCls() {
 	// TODO Auto-generated constructor stub
-
 }
 
 KenCls::~KenCls() {
@@ -20,9 +19,14 @@ KenCls::~KenCls() {
 KenCls::KenCls(KickBehaviorIfc *kickBehavior, JumpBehaviorIfc *jumpBehavior){
 	this->kickBehavior = kickBehavior;
 	this->jumpBehavior = jumpBehavior;
+	healthScore = 36;
+	FighterCls::name = "Ken";
 }
 
 void KenCls::display(){
-	printf("\nKen");
+	printf("\nKen    : ");
+	for(int i = 0; i < healthScore; i++) {
+		printf("/");
+	}
 }
 

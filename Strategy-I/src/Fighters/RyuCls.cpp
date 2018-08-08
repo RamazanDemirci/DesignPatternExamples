@@ -10,7 +10,6 @@
 
 RyuCls::RyuCls() {
 	// TODO Auto-generated constructor stub
-
 }
 
 RyuCls::~RyuCls() {
@@ -20,8 +19,13 @@ RyuCls::~RyuCls() {
 RyuCls::RyuCls(KickBehaviorIfc *kickBehavior, JumpBehaviorIfc *jumpBehavior){
 	this->kickBehavior = kickBehavior;
 	this->jumpBehavior = jumpBehavior;
+	healthScore = 36;
+	FighterCls::name = "Ryu";
 }
 
 void RyuCls::display(){
-	printf("\nRyu");
+	printf("\nRyu : ");
+	for(int i = 0; i < healthScore; i++) {
+			printf("\\");
+		}
 }

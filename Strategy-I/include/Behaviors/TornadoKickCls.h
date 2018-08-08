@@ -11,11 +11,12 @@
 #include "KickBehaviorIfc.h"
 
 class TornadoKickCls : public KickBehaviorIfc {
+	typedef KickBehaviorIfc base;
 public:
 	TornadoKickCls();
 	virtual ~TornadoKickCls();
 	/*Member Functions*/
-	void kick();
+	float kick();
 };
 
 #endif /* TORNADOKICKCLS_H_ */

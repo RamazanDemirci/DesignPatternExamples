@@ -1,3 +1,36 @@
-references : 
-https://www.youtube.com/watch?v=YUCXjUPUbn0
-https://www.youtube.com/watch?v=YXIkfRlIh2k
+* *JumpBehaviorIfc:*
+* *KickBehaviorIfc:*
+	** declares an interface common to all supported algorithms. 
+	** Context(FighterCls) uses this interface to call the algorithm defined by Concrete Strategy(LightningKickCls, ShortJumpCls)
+
+* *LightningKickCls:*
+* *TornadoKickCls:*
+	** implements the algorithm using the Strategy interface(KickBehaviorIfc).
+* *ShortJumpCls:*
+* *LongJumpCls:*
+	** implements the algorithm using the Strategy interface(JumpBehaviorIfc).
+
+* *FighterCls:*
+	** Abstract class that lets Strategy access its data thus support loose coupling  
+	
+* *ChunLiCls:*
+* *KenCls:*
+* *RyuCls:*
+	** is configured with a ConcreteStrategy object.
+	** maintains a reference to a Strategy object.
+
+#######################################
+
+	* req_1 : "Fighters" should have kick, jump, punch and roll behaviors
+    * req_2 : Some "Fighters" should have special kick behaviors such as LightningKick and TornadoKick.
+    * req_3 : Some "Fighters" should have special jump behaviors, such as LongJump and ShortJump.
+    
+* For loose coupling, above requirements implement behavioral interface ,such as *JumpBehaviorIfc, KickBehaviorIfc*, therefore *Concrete Strategy* classes are inherited from this interfaces
+
+#######################################
+
+
+*_references :_* 
+     
+	https://www.youtube.com/watch?v=YUCXjUPUbn0
+	https://www.youtube.com/watch?v=YXIkfRlIh2k

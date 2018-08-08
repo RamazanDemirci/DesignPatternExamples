@@ -23,11 +23,12 @@ FighterCls::FighterCls(KickBehaviorIfc *kickBehavior, JumpBehaviorIfc *jumpBehav
 }
 void FighterCls::punch(){
 	printf("\nDefault Punch");
+	descHealthScore(2);
 }
 
 void FighterCls::kick(){
 	//delegate to kick behavior
-	kickBehavior->kick();
+	descHealthScore(kickBehavior->kick());
 }
 
 void FighterCls::jump(){
@@ -37,6 +38,7 @@ void FighterCls::jump(){
 
 void FighterCls::roll(){
 	printf("\nDefault Roll");
+	incHealthScore(1);
 }
 
 void FighterCls::setKickBehavior(KickBehaviorIfc *kickBehavior){
@@ -47,3 +49,16 @@ void FighterCls::setJumpBehavior(JumpBehaviorIfc *jumpBehavior){
 	this->jumpBehavior = jumpBehavior;
 }
 
+void FighterCls::descHealthScore(float damage){
+	healthScore = (healthScore - damage);
+	if(healthScore < 0){
+		healthScore = 0;
+	}
+}
+
+void FighterCls::incHealthScore(float cure){
+	healthScore = (healthScore + cure);
+	if(healthScore > 36){
+		healthScore = 36;
+	}
+}

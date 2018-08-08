@@ -10,13 +10,14 @@
 
 TornadoKickCls::TornadoKickCls() {
 	// TODO Auto-generated constructor stub
-
+	base::damage = 9;
 }
 
 TornadoKickCls::~TornadoKickCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void TornadoKickCls::kick(){
+float TornadoKickCls::kick(){
 	printf("\nTornado Kick");
+	return base::damage;
 }

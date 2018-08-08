@@ -16,19 +16,19 @@
 							<targetPlatform id="org.eclipse.cdt.msvc.targetPlatform.exe.debug.970410064" superClass="org.eclipse.cdt.msvc.targetPlatform.exe.debug"/>
 							<builder buildPath="${workspace_loc:/Strategy-I}/Debug" id="org.eclipse.cdt.msvc.builder.437972918" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.msvc.builder"/>
 							<tool id="org.eclipse.cdt.msvc.cl.c.exe.debug.1788006984" name="C Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.c.exe.debug">
-								<option id="org.eclipse.cdt.msvc.cl.option.optimization.242897320" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
-								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.363934099" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
-								<option id="org.eclipse.cdt.msvc.cl.option.includes.915157046" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" valueType="includePath">
+								<option id="org.eclipse.cdt.msvc.cl.option.optimization.242897320" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" useByScannerDiscovery="false" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.363934099" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" useByScannerDiscovery="false" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.includes.915157046" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include/Behaviors}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include/Fighters}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.msvc.cl.inputType.c.1174773751" superClass="org.eclipse.cdt.msvc.cl.inputType.c"/>
 							</tool>
-							<tool id="org.eclipse.cdt.msvc.cl.exe.debug.1782828266" name="C++ Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.exe.debug">
-								<option id="org.eclipse.cdt.msvc.cl.option.optimization.1743562534" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
-								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.440718640" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
-								<option id="org.eclipse.cdt.msvc.cl.option.includes.1884728960" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" valueType="includePath">
+							<tool command="cl /c" id="org.eclipse.cdt.msvc.cl.exe.debug.1782828266" name="C++ Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.exe.debug">
+								<option id="org.eclipse.cdt.msvc.cl.option.optimization.1743562534" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" useByScannerDiscovery="false" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.440718640" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" useByScannerDiscovery="false" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.includes.1884728960" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include/Behaviors}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Strategy-I/include/Fighters}&quot;"/>
@@ -39,7 +39,7 @@
 								<inputType id="org.eclipse.cdt.msvc.rc.inputType.148139454" superClass="org.eclipse.cdt.msvc.rc.inputType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.msvc.link.exe.debug.812875892" name="Linker (link)" superClass="org.eclipse.cdt.msvc.link.exe.debug">
-								<option id="org.eclipse.cdt.msvc.link.option.debug.990872845" name="Generate Debug Info (/debug)" superClass="org.eclipse.cdt.msvc.link.option.debug" value="true" valueType="boolean"/>
+								<option id="org.eclipse.cdt.msvc.link.option.debug.990872845" name="Generate Debug Info (/debug)" superClass="org.eclipse.cdt.msvc.link.option.debug" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="org.eclipse.cdt.msvc.link.inputType.530348695" superClass="org.eclipse.cdt.msvc.link.inputType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.msvc.lib.158316473" name="Library Manager (lib)" superClass="org.eclipse.cdt.msvc.lib"/>
@@ -52,6 +52,7 @@
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="ilg.gnuarmeclipse.managedbuild.packs"/>
 		</cconfiguration>
 		<cconfiguration id="org.eclipse.cdt.msvc.exe.release.348805489">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.eclipse.cdt.msvc.exe.release.348805489" moduleId="org.eclipse.cdt.core.settings" name="Release">
@@ -104,6 +105,13 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/Strategy-I"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/Strategy-I"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
