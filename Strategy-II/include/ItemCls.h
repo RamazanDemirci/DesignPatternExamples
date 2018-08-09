@@ -12,15 +12,16 @@
 
 class ItemCls {
 public:
-	ItemCls();
-	ItemCls(std::string upc, int cost);
+	ItemCls(std::string upc, float cost, std::string currency);
 	virtual ~ItemCls();
-private:
-	std::string upcCode;
-	int price;
-public:
 	std::string getUpcCode();
-	int getPrice();
+	float getPrice();
+	std::string getCurrency();
+private:
+	ItemCls();
+	std::string upcCode;
+	float price;
+	std::string currency;
 };
 
 #endif /* ITEMCLS_H_ */

@@ -18,10 +18,13 @@ public:
 	virtual ~ShoppingCartCls();
 	void addItem(ItemCls *item);
 	void removeItem(ItemCls *item);
-	int calculateTotal();
-	void pay(PaymentStrategyIfc *paymentMethod);
+	float calculateTotal();
+	bool pay(PaymentStrategyIfc *paymentMethod);
+	std::string getCurrency();
+	void setCurrency(std::string currency);
 private:
 	std::vector<ItemCls*> itemList;
+	std::string currency;
 };
 
 #endif /* SHOPPINGCARTCLS_H_ */

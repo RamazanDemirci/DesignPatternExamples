@@ -16,7 +16,7 @@ public:
 	CreditCardStrategyCls();
 	CreditCardStrategyCls(std::string name, std::string cardNumber, std::string cvv, std::string expiryDate);
 	virtual ~CreditCardStrategyCls();
-	void pay(int amount);
+	/*virtual*/bool pay(int amount);
 private:
 	std::string name;
 	std::string cardNumber;

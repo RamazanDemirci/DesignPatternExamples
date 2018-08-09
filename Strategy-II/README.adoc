@@ -1,3 +1,31 @@
-references : 
-https://www.youtube.com/watch?v=YUCXjUPUbn0
-https://www.youtube.com/watch?v=YXIkfRlIh2k
+* *PaymentStrategyIfc:*
+	** declares an interface common to all supported algorithms. 
+	** Context(ShoppingCartCls) uses this interface to call the algorithm defined by Concrete Strategy(CreditCardStrategyCls, PaypalStrategyCls)
+
+* *CreditCardStrategyCls:*
+* *PaypalStrategyCls:*
+	** implements the algorithm using the Strategy interface(PaymentStrategyIfc).
+
+* *FighterCls:*
+	** Abstract class that lets Strategy access its data thus support loose coupling  
+	
+* *ShoppingCartCls:*
+	** is configured with a ConcreteStrategy object.
+	** maintains a reference to a Strategy object.
+
+* *ItemCls:*
+    ** Action Item Class. Helper Class
+
+#######################################
+
+	* req_1 : "Shopping Cart" should have many "item"s
+	* req_2 : "Shopping Cart" should have *register* "item"s
+    * req_3 : "Shopping Cart" should be able to *add/remove* "item"
+    * req_4 : "Shopping Cart" should be *pay* by "Payment Strategy" which is inherit PaymentStrategyIfc
+    
+* For loose coupling, above requirements implement strategy interface ,such as *PaymentStrategyIfc*, therefore *Concrete Strategy* classes are inherited from this interfaces
+
+#######################################
+
+
+*_references :_* 

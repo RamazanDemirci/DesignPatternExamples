@@ -23,7 +23,8 @@ CreditCardStrategyCls::~CreditCardStrategyCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void CreditCardStrategyCls::pay(int amount){
+bool CreditCardStrategyCls::pay(int amount){
 	printf("\n%d paid with credit/debit card", amount);
+	return true;
 }
 

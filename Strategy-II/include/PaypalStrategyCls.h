@@ -16,7 +16,7 @@ public:
 	PaypalStrategyCls();
 	PaypalStrategyCls(std::string email, std::string pwd);
 	virtual ~PaypalStrategyCls();
-	void pay(int amount);
+	/*virtual*/bool pay(int amount);
 private:
 	std::string emailId;
 	std::string password;

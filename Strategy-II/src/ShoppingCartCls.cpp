@@ -10,6 +10,7 @@
 
 ShoppingCartCls::ShoppingCartCls() {
 	// TODO Auto-generated constructor stub
+	currency = "TL";
 }
 
 ShoppingCartCls::~ShoppingCartCls() {
@@ -24,16 +25,23 @@ void ShoppingCartCls::removeItem(ItemCls *item){
 	this->itemList.erase(std::remove(this->itemList.begin(), this->itemList.end(), item), this->itemList.end());
 }
 
-int ShoppingCartCls::calculateTotal(){
-	int sum = 0;
+float ShoppingCartCls::calculateTotal(){
+	float sum = 0;
 	for(ItemCls *item : itemList){
 		sum += item->getPrice();
 	}
 	return sum;
 }
 
-void ShoppingCartCls::pay(PaymentStrategyIfc *paymentMethod){
+bool ShoppingCartCls::pay(PaymentStrategyIfc *paymentMethod){
 	int amount = calculateTotal();
-	paymentMethod->pay(amount);
+	return paymentMethod->pay(amount);
 }
 
+void ShoppingCartCls::setCurrency(std::string currency){
+	this->currency = currency;
+}
+
+std::string ShoppingCartCls::getCurrency(){
+	return this->currency;
+}

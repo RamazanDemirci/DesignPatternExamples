@@ -22,7 +22,8 @@ PaypalStrategyCls::~PaypalStrategyCls() {
 	// TODO Auto-generated destructor stub
 }
 
-void PaypalStrategyCls::pay(int amount) {
+bool PaypalStrategyCls::pay(int amount) {
 	printf("\n%d paid using Paypal.", amount);
+	return true;
 }
 

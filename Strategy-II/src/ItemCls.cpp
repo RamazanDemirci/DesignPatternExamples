@@ -12,9 +12,10 @@ ItemCls::ItemCls() {
 
 }
 
-ItemCls::ItemCls(std::string upc, int cost){
+ItemCls::ItemCls(std::string upc, float cost, std::string currency){
 	this->upcCode = upcCode;
 	this->price = cost;
+	this->currency = currency;
 }
 
 ItemCls::~ItemCls() {
@@ -25,6 +26,10 @@ std::string ItemCls::getUpcCode(){
 	return this->upcCode;
 }
 
-int ItemCls::getPrice(){
+float ItemCls::getPrice(){
 	return this->price;
+}
+
+std::string ItemCls::getCurrency(){
+	return this->currency;
 }
