@@ -1,16 +1,16 @@
 * *ShoppingCartVisitorIfc:*
 	** declares a Visit operation for each class of ConcreteElement(BookCls, FruitCls)
 	
+* *ShoppingCartClientCls:*
+	** implements an Accept operation that takes a visitor as an argument
+
+* *ItemElementIfc:*
+    ** defines an Accept operation that takes a visitor interface as an argument.
+
 * *BookCls:*
 * *MonitorCls:*
 * *MouseCls:*
 	** implements each operation declared by Visitor
-
-* *ItemElementIfc:*
-    ** defines an Accept operation that takes a visitor interface as an argument.
-  
-* *ShoppingCartClientCls:*
-	** implements an Accept operation that takes a visitor as an argument
 
 #######################################
 

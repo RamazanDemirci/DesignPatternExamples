@@ -1,44 +1,31 @@
-#Kullanýcý -> Check eder -> sistemi ve tüm parçalarý
-#Kullanýcý -> Parça operasyonu yapar -> sistemi ve tüm parçalarý
+* *VisitorIfc:*
+	** declares a Visit operation for each class of ConcreteElement(BookCls, FruitCls)
+	
+* *PartsCheckerCls:*
+* *PartsOperatorCls:*
+	** implements an Accept operation that takes a visitor as an argument
 
-/*sistem : bike , parçalar : engine, fuelTank*/
+* *VisitableIfc:*
+    ** defines an Accept operation that takes a visitor interface as an argument.
 
-/*Parçalarý check eden class ihtiyacýmýz var*/
-/*bu sýnýf tüm parçalara bir þekilde eriþebilecek*/
-/*her parçayý check edecek fonksiyonlara ihtiyacýmýz var*/
-
-/*parça operasyonu yapacak class ihtiyacýmýz var*/
-/*bu sýnýf tüm parçalara bir þekilde eriþebilecek*/
-/*her parça için kontrol edecek fonksiyonlara ihtiyacýmýz var*/
-
-/*parça classlarý deðiþmeyen classlar*/
-/*operasyonlardan etkilenmeyecekler*/
-/*bu sýnýflarý kullanan sýnýflardan gelen tüm operasyonlarý kabul edecek ve operasyonlarýn yazýldýðý sýnýfa kendilerini("this") gönderekler*/
-
-/*sistemi temsil eden class parça classlarý gibi operasyonlarýn yapýldýðý sýnýflarý kabul eder ve iþlemlerini gerçekleþtirir*/
-/*sistem classlarý parçalarý tutacak bir container bulundurur.*/
-/*sistem classlarý parçalarý ekleyip çýkartabilir*/
+* *BikeCls:*
+* *EngineCls:*
+* *FuelTankCls:*
+	** implements each operation declared by Visitor
 
 
-#Implimentation
+#######################################
 
-/*Sistem Objesi Yaratýlýr.*/
-/*Eklenecek parça objeleri yaratýlýr ve eklenir*/
-/*sistemin yapmasýný istediðiðimiz operasyonlarý gerçekleþtirecek class objeleri yaratýlýr ve sistem objesine "accept" metodu ile verilir*/
+	* req_1 : "Bike" should *execute specific "checker" and "operator" algorithm* for each of its "part"(elements)
+		** req_1.1 : "Bike" should *check* each item
+		** req_1.1 : "Bike" should *operate* each item's name and cost
+    * req_2 : "algorithm"s shall be able to change but "Program" should *not* change "bike parts"
+    
+* For loose coupling, above requirements implement visitor interface ,such as *VisitorIfc*, therefore *Concrete Visitor* classes are inherited from this interfaces
 
-/*sistemin gerçekleþtirmesini istediðimiz operasyonlarý tanýmladýðýmýz sýnýflara "visitor" sýnýflar diyoruz.bunlar için bir interface yaratýyoruz. concrete sýnýflarda her bir ayrý parça için "visit" fonksiyonu yazýlýr ki fonksiyon operasyonun nasýl yapýlacaðýný ifade eder.*/
-
-/*sistem ve parçalarýna "visitable" sýnýflar diyoruz. bunlar için bir interface yartýyoruz ki gerçekleþtirilecek operasyonlarý kabul etmek için "accept" metodu yazýlýr*/
-/*sistem class accept metodu tüm parçalar için parçalarýn accept metorunu çaðýrarak operasyon sýnýfý içerisinde belirlenen gerekli operasyonlarý gerçekleþtirmesi saðlanýr*/
-
-## ÖZET ##
-/*Deðiþmez bir sistem olmalý.*/
-/*bu sistem operasyonlarý tamamen kullanýcýya býrakmalý yada kullanýcý kendi operasyonlarýný tanýmlayabilmeli*/
-/*"visitor" interface i kullanýcý için sistemde kontrol edebileceði "visitable" interface'inden türemiþ classlar için kendi operasyonlarýný yazmasýna imkan saðlar*/
-  
-
+#######################################
 
 
 *_references :_* 
-    
-    http://www.thejavageek.com/2016/10/19/visitor-design-pattern-implementation/
+ 
+	http://www.thejavageek.com/2016/10/19/visitor-design-pattern-implementation/
