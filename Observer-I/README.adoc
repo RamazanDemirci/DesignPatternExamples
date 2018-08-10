@@ -26,7 +26,7 @@
     * req_2 : "Doctor" should *observe* any changes in "Patient" status 
     * req_3 : "Doctor" should *update* when is occured any changes of "Patient" status 
 
-* For loose coupling, above requirements implement as *ObserverIfc* which is interface, therefore *ShopCls* is inherited from this interface
+* For loose coupling, above requirements implement as *ObserverIfc* which is interface, therefore *DoctorCls* is inherited from this interface
 
 
     * req_4 : "Patient" should have *many* observers
@@ -34,7 +34,7 @@
     * req_6 : "Patient" should *hold* its observers list for notify all observer
     * req_7 : "Patient" should be able to *add/remove* its observers
 
-* For loose coupling, above requirements implement as "SubjectCls" which is abstract class, therefore *DummyProductCls* is inherited from this interface
+* For loose coupling, above requirements implement as "SubjectCls" which is abstract class, therefore *PatientCls* is inherited from this interface
 
 #######################################
 

@@ -83,14 +83,14 @@ int main()
 			action(fighterList);
 		}
 
-		for(int i = 0; i < fighterList.size(); i++){
+		for(int i = 0; i < fighterList.size(); i++) {
 			FighterCls *item = fighterList.at(i);
 			if(item->healthScore == 0) {
 				loser = item->name;
 				winner = fighterList.at((i+1)%2)->name;
 				status = StateEnum::FINISH;
 			}
-			else if(item->healthScore == 18){
+			else if(item->healthScore == 18) {
 				//Change behavior dynamically(algorithms are interchangeable)
 				item->setJumpBehavior(longJump);
 			}

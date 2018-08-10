@@ -26,7 +26,7 @@ int ShoppingCartClientCls::visit(BookCls *book) {
 		cost = book->getPrice() - 5;
 	} else
 		cost = book->getPrice();
-	printf("\nBook ISBN::%d cost = %d", book->getIsbnNumber(), cost);
+	printf("\nBook ISBN::%s cost = %d", book->getIsbnNumber().c_str(), cost);
 
 	return cost;
 }
@@ -36,7 +36,7 @@ int ShoppingCartClientCls::visit(FruitCls *fruit){
 	int cost = 0;
 
 	cost = fruit->getPricePerKg() * fruit->getWeight();
-	printf("\n%s cost = %d", fruit->getName().c_str(), cost);
+	printf("\nFruit Name::%s cost = %d", fruit->getName().c_str(), cost);
 
 	return cost;
 }

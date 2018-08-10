@@ -1,2 +1,30 @@
-references : 
-https://www.javacodegeeks.com/2013/08/visitor-design-pattern-in-java-example-tutorial.html
+* *ShoppingCartVisitorIfc:*
+	** declares a Visit operation for each class of ConcreteElement(BookCls, FruitCls)
+	
+* *BookCls:*
+* *MonitorCls:*
+* *MouseCls:*
+	** implements each operation declared by Visitor
+
+* *ItemElementIfc:*
+    ** defines an Accept operation that takes a visitor interface as an argument.
+  
+* *ShoppingCartClientCls:*
+	** implements an Accept operation that takes a visitor as an argument
+
+#######################################
+
+	* req_1 : "Shopping Cart" should *execute specific "display" algorithm* for each of its "items"(elements)
+		** req_1.1 : "Shopping Cart" should display each item's name and cost
+		** req_1.1 : "Shopping Cart" should display each item's name and cost
+    * req_2 : "Display algorithm" shall be able to change but "Program" should *not* change "computer parts"
+    * req_3 : "Shopping Cart" should calculate total cost.
+    
+* For loose coupling, above requirements implement visitor interface ,such as *ShoppingCartVisitorIfc*, therefore *Concrete Visitor* classes are inherited from this interfaces
+
+#######################################
+
+
+*_references :_* 
+ 
+	https://www.javacodegeeks.com/2013/08/visitor-design-pattern-in-java-example-tutorial.html

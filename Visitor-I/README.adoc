@@ -1,4 +1,29 @@
+* *ComputerPartVisitorIfc:*
+	** declares a Visit operation for each class of ConcreteElement(KeyboardCls, MonitorCls)
+
+* *ComputerPartDisplayVisitorCls:*
+
+* *ComputerPartIfc:*
+    ** defines an Accept operation that takes a visitor interface as an argument.
+
+* *KeyboardCls:*
+* *MonitorCls:*
+* *MouseCls:*
+	** implements each operation declared by Visitor
+  
+* *ComputerCls:*
+	** implements an Accept operation that takes a visitor as an argument
+
+#######################################
+
+	* req_1 : "Computer" should *execute specific "display" algorithm* for each of its "computer parts"(elements)
+    * req_2 : "Display algorithm" shall be able to change but "Program" should *not* change "computer parts"
+    
+* For loose coupling, above requirements implement visitor interface ,such as *ComputerPartVisitorIfc*, therefore *Concrete Visitor* classes are inherited from this interfaces
+
+#######################################
 
 
-references : 
-https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm
+*_references :_* 
+     
+	https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm

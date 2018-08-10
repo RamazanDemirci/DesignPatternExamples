@@ -17,19 +17,19 @@ otherwise communicated with another colleague.
 #######################################
 
     * req_1 : "Auctioner" should communicate each "Bidder"
-    * req_3 : "Auctioner" should have *many* "Bidder"s
+    * req_2 : "Auctioner" should have *many* "Bidder"s
     * req_3 : "Auctioner" should find highest "Bidder"
-    * req_3 : "Auctioner" should *register* its colleagues list for find highest "Bidder"
-    * req_2 : "Auctioner" should be able to *add/remove* its "Bidder" 
+    * req_4 : "Auctioner" should *register* its colleagues list for find highest "Bidder"
+    * req_5 : "Auctioner" should be able to *add/remove* its "Bidder" 
     
 
 * For loose coupling, above requirements implement as *MediatorIfc* which is interface, therefore *AuctionMediatorCls* is inherited from this interface
 
 
-    * req_4 : "Bidder" should communicate "Auctioner"
-    * req_3 : "Bidder" should have *one* "Auctioner"
-    * req_5 : "Bidder" should offer bid.
-    * req_5 : "Bidder" should cancel bid.
+    * req_6 : "Bidder" should communicate "Auctioner"
+    * req_7 : "Bidder" should have *one* "Auctioner"
+    * req_8 : "Bidder" should offer bid.
+    * req_9 : "Bidder" should cancel bid.
     
 
 * For loose coupling, above requirements implement as *BuyerCls* which is abstract class, therefore *AuctionBuyerCls* is inherited from this interface

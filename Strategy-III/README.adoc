@@ -1,4 +1,26 @@
 
+* *StrategyIfc:*
+	** declares an interface common to all supported algorithms. 
+	** Context(ContextCls) uses this interface to call the algorithm defined by Concrete Strategy(OperationAddCls, OperationMultiplyCls)
 
-references : 
-https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm
+* *OperationAddCls:*
+* *OperationMultiplyCls:*
+* *OperationSubstractCls:*
+	** implements the algorithm using the Strategy interface(StrategyIfc).  
+	
+* *ContextCls:*
+	** is configured with a ConcreteStrategy object.
+	** maintains a reference to a Strategy object.
+
+#######################################
+
+    * req_1 : "Context" should *execute* *add*, *multiply*, *substract* operations
+    
+* For loose coupling, above requirements implement strategy interface ,such as *StrategyIfc*, therefore *Concrete Strategy* classes are inherited from this interfaces
+
+#######################################
+
+
+*_references :_* 
+    
+    https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm

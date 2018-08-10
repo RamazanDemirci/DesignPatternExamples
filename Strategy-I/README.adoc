@@ -21,7 +21,7 @@
 
 #######################################
 
-	* req_1 : "Fighters" should have kick, jump, punch and roll behaviors
+	* req_1 : "Fighters" should *perform* kick, jump, punch and roll behaviors
     * req_2 : Some "Fighters" should have special kick behaviors such as LightningKick and TornadoKick.
     * req_3 : Some "Fighters" should have special jump behaviors, such as LongJump and ShortJump.
     
