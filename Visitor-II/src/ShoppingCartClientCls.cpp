@@ -17,26 +17,34 @@ ShoppingCartClientCls::~ShoppingCartClientCls() {
 //	printf("\n%s", __FUNCTION__);
 }
 
-int ShoppingCartClientCls::visit(BookCls *book) {
+float ShoppingCartClientCls::visit(BookCls *book) {
 //	printf("\n%s", __FUNCTION__);
-	int cost = 0;
+	float cost = 0;
 
 	//apply 5$ discount if book price is greater than 50
 	if (book->getPrice() > 50) {
 		cost = book->getPrice() - 5;
 	} else
 		cost = book->getPrice();
-	printf("\nBook ISBN::%s cost = %d", book->getIsbnNumber().c_str(), cost);
+	printf("\n%-10s %-20s %-20s %-.2f"
+			, "Book"
+			, book->getIsbnNumber().c_str()
+			, book->getDescription().c_str()
+			, cost);
 
 	return cost;
 }
 
-int ShoppingCartClientCls::visit(FruitCls *fruit){
+float ShoppingCartClientCls::visit(FruitCls *fruit){
 //	printf("\n%s", __FUNCTION__);
-	int cost = 0;
+	float cost = 0;
 
 	cost = fruit->getPricePerKg() * fruit->getWeight();
-	printf("\nFruit Name::%s cost = %d", fruit->getName().c_str(), cost);
+	printf("\n%-10s %-20s %-20s %-.2f"
+			, "Fruit"
+			, fruit->getName().c_str()
+			, fruit->getDescription().c_str()
+			, cost);
 
 	return cost;
 }

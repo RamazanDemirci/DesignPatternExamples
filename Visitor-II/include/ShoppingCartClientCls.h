@@ -16,8 +16,8 @@ class ShoppingCartClientCls : public ShoppingCartVisitorIfc {
 public:
 	ShoppingCartClientCls();
 	virtual ~ShoppingCartClientCls();
-	int visit(BookCls *book);
-	int visit(FruitCls *fruit);
+	/*virtual*/float visit(BookCls *book);
+	/*virtual*/float visit(FruitCls *fruit);
 };
 
 #endif /* SHOPPINGCARTCLIENTCLS_H_ */

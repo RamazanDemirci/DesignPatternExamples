@@ -17,18 +17,30 @@ ComputerPartDisplayVisitorCls::~ComputerPartDisplayVisitorCls() {
 }
 
 void ComputerPartDisplayVisitorCls::visit(ComputerCls *computer){
-	printf("\nDisplaying Computer.");
+	printf("\n-----Computer General Features-----");
+	printf("\nMemory Size       : %s", "512Mb");
+	printf("\nHardDisc Size     : %s", "20Gb");
+	printf("\nGraphics Card Size: %s", "128Mb");
 }
 
 void ComputerPartDisplayVisitorCls::visit(MouseCls *mouse){
-	printf("\nDisplaying Mouse.");
+	printf("\n-----Mouse General Features-----");
+	printf("\nBrand                   : %s", "A4-Tech");
+	printf("\nCommunication Type      : %s", "Wireless");
+	printf("\nPosition Detection Type : %s", "Optic");
 }
 
 void ComputerPartDisplayVisitorCls::visit(KeyboardCls *keyboard){
-	printf("\nDisplaying Keyboard.");
+	printf("\n-----Keyboard General Features-----");
+	printf("\nBrand                   : %s", "Logitech");
+	printf("\nCommunication Type      : %s", "Wired");
+	printf("\nAlphabet Type           : %s", "QWERTY-EN");
 }
 
 void ComputerPartDisplayVisitorCls::visit(MonitorCls *monitor){
-	printf("\nDisplaying Monitor.");
+	printf("\n-----Monitor General Features-----");
+	printf("\nBrand                   : %s", "LG");
+	printf("\nScreen Technology       : %s", "LCD");
+	printf("\nMonitor Type            : %s", "Flat");
 }
 

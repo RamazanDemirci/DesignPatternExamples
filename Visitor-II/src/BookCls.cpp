@@ -12,10 +12,11 @@ BookCls::BookCls() {
 //	printf("\n%s", __FUNCTION__);
 }
 
-BookCls::BookCls(int cost, std::string isbn){
+BookCls::BookCls(float cost, std::string isbn, std::string description){
 //	printf("\n%s", __FUNCTION__);
 	this->price = cost;
 	this->isbnNumber = isbn;
+	this->description = description;
 }
 
 
@@ -24,7 +25,7 @@ BookCls::~BookCls() {
 //	printf("\n%s", __FUNCTION__);
 }
 
-int BookCls::getPrice() {
+float BookCls::getPrice() {
 //	printf("\n%s", __FUNCTION__);
 	return this->price;
 }
@@ -34,7 +35,12 @@ std::string BookCls::getIsbnNumber(){
 	return this->isbnNumber;
 }
 
-int BookCls::accept(ShoppingCartVisitorIfc *visitor){
+std::string BookCls::getDescription(){
+//	printf("\n%s", __FUNCTION__);
+	return this->description;
+}
+
+float BookCls::accept(ShoppingCartVisitorIfc *visitor){
 //	printf("\n%s", __FUNCTION__);
 	return visitor->visit(this);
 }

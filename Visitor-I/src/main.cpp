@@ -10,6 +10,9 @@
 
 int main(){
 	ComputerPartIfc *computer = new ComputerCls();
+
+	printf("\n**********Display Computer Parts**********");
 	computer->accept(new ComputerPartDisplayVisitorCls());
+	printf("\n******************************************");
 }
 

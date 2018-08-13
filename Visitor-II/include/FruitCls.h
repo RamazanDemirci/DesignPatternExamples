@@ -16,15 +16,17 @@ class FruitCls : public ItemElementIfc {
 public:
 	FruitCls();
 	virtual ~FruitCls();
-	FruitCls(int pricePerKg, int weight, std::string name);
-	int getPricePerKg();
-	int getWeight();
+	FruitCls(float pricePerKg, float weight, std::string name, std::string description);
+	float getPricePerKg();
+	float getWeight();
 	std::string getName();
-	int accept(ShoppingCartVisitorIfc *visitor);
+	std::string getDescription();
+	float accept(ShoppingCartVisitorIfc *visitor);
 private:
-	int pricePerKg;
-	int weight;
+	float pricePerKg;
+	float weight;
 	std::string name;
+	std::string description;
 };
 
 #endif /* FRUITCLS_H_ */

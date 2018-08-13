@@ -19,7 +19,9 @@ int main(){
 	bike->addBikePart(fuelTank);
 	bike->addBikePart(engine);
 
+	printf("\n\n##########%s##########", "Parts Checker Start");
 	bike->accept(new PartsCheckerCls());
+	printf("\n\n##########%s##########", "Parts Operation Start");
 	bike->accept(new PartsOperatorCls());
 }
 

@@ -16,14 +16,16 @@
 class BookCls : public ItemElementIfc {
 public:
 	BookCls();
-	BookCls(int cost, std::string isbn);
+	BookCls(float cost, std::string isbn, std::string description);
 	virtual ~BookCls();
-	int getPrice();
+	float getPrice();
 	std::string getIsbnNumber();
-	int accept(ShoppingCartVisitorIfc *visitor);
+	std::string getDescription();
+	float accept(ShoppingCartVisitorIfc *visitor);
 private:
-	int price;
+	float price;
 	std::string isbnNumber;
+	std::string description;
 };
 
 #endif /* BOOKCLS_H_ */

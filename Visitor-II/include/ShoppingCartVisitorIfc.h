@@ -14,8 +14,8 @@ class FruitCls;
 
 class ShoppingCartVisitorIfc {
 public:
-	virtual int visit(BookCls *book) = 0;
-	virtual int visit(FruitCls *fruit) = 0;
+	virtual float visit(BookCls *book) = 0;
+	virtual float visit(FruitCls *fruit) = 0;
 };
 
 

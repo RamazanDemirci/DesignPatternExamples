@@ -12,7 +12,7 @@ class ShoppingCartVisitorIfc;
 
 class ItemElementIfc {
 public:
-	virtual int accept(ShoppingCartVisitorIfc *visitor) = 0;
+	virtual float accept(ShoppingCartVisitorIfc *visitor) = 0;
 };
 
 

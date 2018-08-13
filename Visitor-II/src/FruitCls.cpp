@@ -12,11 +12,12 @@ FruitCls::FruitCls() {
 //	printf("\n%s", __FUNCTION__);
 }
 
-FruitCls::FruitCls(int pricePerKg, int weight, std::string name){
+FruitCls::FruitCls(float pricePerKg, float weight, std::string name, std::string description){
 //	printf("\n%s", __FUNCTION__);
 	this->pricePerKg = pricePerKg;
 	this->weight = weight;
 	this->name = name;
+	this->description = description;
 }
 
 FruitCls::~FruitCls() {
@@ -24,12 +25,12 @@ FruitCls::~FruitCls() {
 //	printf("\n%s", __FUNCTION__);
 }
 
-int FruitCls::getPricePerKg(){
+float FruitCls::getPricePerKg(){
 //	printf("\n%s", __FUNCTION__);
 	return this->pricePerKg;
 }
 
-int FruitCls::getWeight(){
+float FruitCls::getWeight(){
 //	printf("\n%s", __FUNCTION__);
 	return this->weight;
 }
@@ -39,7 +40,12 @@ std::string FruitCls::getName(){
 	return this->name;
 }
 
-int FruitCls::accept(ShoppingCartVisitorIfc *visitor){
+std::string FruitCls::getDescription(){
+//	printf("\n%s", __FUNCTION__);
+	return this->description;
+}
+
+float FruitCls::accept(ShoppingCartVisitorIfc *visitor){
 //	printf("\n%s", __FUNCTION__);
 	return visitor->visit(this);
 }

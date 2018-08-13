@@ -19,15 +19,27 @@ PartsCheckerCls::~PartsCheckerCls() {
 
 void PartsCheckerCls::visit(BikeCls *bike){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Going to the bike");
+	printf("\n\n%s", "Bike Checking Start");
+	printf("\n %s", "Electric Systems Checked");
+	printf("\n %s", "Gear Checked");
+	printf("\n %s", "Wheel Checked");
+	printf("\n%s", "Bike Checking End");
 }
 
 void PartsCheckerCls::visit(EngineCls *engine){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Checking whether ignition switch is on");
+	printf("\n\n%s", "Engine Checking Start");
+	printf("\n %s", "Pistons Checked");
+	printf("\n %s", "Shaft Checked");
+	printf("\n %s", "Ignition Systems Checked");
+	printf("\n%s", "Engine Checking End");
 }
 
 void PartsCheckerCls::visit(FuelTankCls *fuelTank){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Checking whether there is fuel in fuel tank");
+	printf("\n\n%s", "FuelTank Checking Start");
+	printf("\n %s", "Fullness  Checked");
+	printf("\n %s", "Filter Checked");
+	printf("\n %s", "Electronic Checked");
+	printf("\n%s", "FuelTank Checking End");
 }

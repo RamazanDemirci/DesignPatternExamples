@@ -20,16 +20,25 @@ PartsOperatorCls::~PartsOperatorCls() {
 
 void PartsOperatorCls::visit(BikeCls *bike){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Now going to start bike");
+	printf("\n\n%s", "Bike Operation Start");
+	printf("\n%s", "Wheels turns");
+	printf("\n%s", "Engine runs");
+	printf("\n%s", "Bike Operation End");
 }
 
 void PartsOperatorCls::visit(EngineCls *engine){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Accepting fuel from fuel tank and running engine");
+	printf("\n\n%s", "Engine Operation Start");
+	printf("\n%s", "Ignition is working");
+	printf("\n%s", "Pistons are working");
+	printf("\n%s", "Engine Operation End");
 }
 
 void PartsOperatorCls::visit(FuelTankCls *fuelTank){
 //	printf("\n%s", __FUNCTION__);
-	printf("\n%s", "Releasing fuel from fuel tank to Engine");
+	printf("\n\n%s", "FuelTank Operation Start");
+	printf("\n%s", "Fuel flows");
+	printf("\n%s", "Fuel is filtering");
+	printf("\n%s", "FuelTank Operation End");
 }
 
